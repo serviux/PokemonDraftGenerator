@@ -6,6 +6,7 @@ import requests
 import json
 import re
 
+
 NAMES_URL = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_name"
 
 
