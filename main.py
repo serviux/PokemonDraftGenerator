@@ -46,6 +46,7 @@ def make_draft(df):
     filtered = df[bools]
     sample = filtered.sample(n=Config.SAMPLE_SIZE)
     sample.to_csv(Config.OUT_FILE, index=False)
+    print(f"File saved to {Config.OUT_FILE}")
 
 
 def main():
