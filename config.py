@@ -12,5 +12,8 @@ class Config:
 
 
         # file data gets saved too
-        OUT_FILE = "out.csv"
+        OUT_FILE = "Draft.csv"
+
+        # email file will get sent to afterwards
+        EMAIL = "example@email.com"
 
