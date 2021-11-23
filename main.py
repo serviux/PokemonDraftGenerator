@@ -35,12 +35,12 @@ def apply_tags(df):
                 pokemon_tags.append(tag)
 
         df["pokemon_category"] = pokemon_tags
-        df.to_csv("test.csv", index=False)
         return df
                 
 def make_draft(df):
-        bools = ~df.isin(Config.DONT_USE)
+        bools = ~df["pokemon_category"].isin(Config.DONT_USE)
         filtered = df[bools]
+        filtered.to_csv("test.csv", index=False)
         sample = filtered.sample(n=Config.SAMPLE_SIZE)
         sample.to_csv(Config.OUT_FILE,index=False)
 
